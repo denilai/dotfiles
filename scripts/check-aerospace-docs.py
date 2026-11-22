@@ -79,7 +79,7 @@ def main():
                 errors.append(f"{where}: нет скрипта {script}")
             elif not os.access(script, os.X_OK):
                 errors.append(f"{where}: скрипт {script} не исполняемый")
-        m = re.match(r"\s*(?:workspace|move-node-to-workspace)\s+(\S+)", c)
+        m = re.match(r"\s*(?:workspace|move-node-to-workspace)\s+(?:--\S+\s+)*([^-\s]\S*)", c)
         if m and m.group(1) not in persistent and m.group(1) not in ("next", "prev"):
             warns.append(f"{where}: воркспейс `{m.group(1)}` не входит в persistent-workspaces")
 
