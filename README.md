@@ -11,6 +11,8 @@
 |---|---|---|---|
 | `.aerospace.toml` | конфиг тайлингового менеджера окон AeroSpace, см. [docs/aerospace.md](docs/aerospace.md) | macOS | да (симлинк) |
 | `docs/aerospace-cheatsheet.html`, `scripts/aerospace-cheatsheet.sh` | шпаргалка по AeroSpace и скрипт, который её показывает (F20 → привязка в AeroSpace → скрипт; F20 шлёт комбо на Corne) | macOS | работает из репозитория, ссылок не нужно |
+| `scripts/macos-spaces-shortcuts.sh` | отключает (`off`) или возвращает (`on`) четыре системных сочетания macOS ⌃←/→/↑/↓ (Spaces, Mission Control, Application windows), которые мешают привязкам AeroSpace; копия настроек в `~/.local/state/dotfiles/` | macOS | запускается вручную, сейчас `off` |
+| `.config/borders/bordersrc` | JankyBorders: синяя рамка 4 px вокруг активного окна; запускается службой `brew services start felixkratz/formulae/borders` | macOS | да (симлинк) |
 | `.githooks/pre-commit`, `scripts/check-aerospace-docs.py` | хук: проверка конфига AeroSpace (ошибки блокируют коммит) и сверка шпаргалки с конфигом (предупреждения) | любая | через `.git/hooks/pre-commit` (общий диспетчер), на новом клоне нужна ссылка, см. [CLAUDE.md](CLAUDE.md) |
 | `.config/alacritty/alacritty.toml` | терминал Alacritty: шрифт 15, Ctrl+Shift+S — новое окно, Ctrl+правый клик — вставка, выделение копируется в буфер, тема `themes/aura.toml` | любая | нет |
 | `.config/alacritty/catppuccin` | темы Catppuccin для Alacritty (записан как вложенный git-репозиторий без `.gitmodules`) | любая | нет |

@@ -58,12 +58,21 @@ gaps.outer.right =      8
     ctrl-alt-shift-cmd-slash = 'layout tiles horizontal vertical'
     ctrl-alt-shift-cmd-comma = 'layout accordion horizontal vertical'
     ctrl-alt-shift-cmd-period = 'layout floating tiling'
-    ctrl-alt-shift-cmd-enter = 'fullscreen'
+    ctrl-alt-shift-cmd-enter = 'fullscreen'   # окно на весь воркспейс, внешние зазоры (gaps.outer) сохраняются
     ctrl-alt-shift-cmd-equal = 'balance-sizes'
 
     # режимы
     ctrl-alt-shift-cmd-m = 'mode move'
     ctrl-alt-shift-cmd-r = 'mode resize'
+    ctrl-alt-shift-cmd-semicolon = 'mode service'
+
+    # Слой Nav на Corne шлёт ⌃←/→/↑/↓ (бывшие переключение Spaces, Mission Control и App Exposé):
+    # на клавишах Nav+; Nav+' Nav+F Nav+G теперь воркспейсы и окно. Настоящие Ctrl+стрелки в
+    # приложениях перехватываются.
+    ctrl-left = 'workspace --wrap-around prev'
+    ctrl-right = 'workspace --wrap-around next'
+    ctrl-up = 'fullscreen'
+    ctrl-down = 'layout floating tiling'
 
     # шпаргалка: комбо двух крайних sticky Shift на Corne шлёт F20
     f20 = 'exec-and-forget $HOME/repos/personal/dotfiles/scripts/aerospace-cheatsheet.sh toggle'
@@ -131,16 +140,22 @@ gaps.outer.right =      8
     esc = 'mode main'
     enter = 'mode main'
 
-# Сервисный режим: alt-shift-;
+# Сервисный режим: Hyper+; (запасной вход alt-shift-;). Одна клавиша без модификаторов, затем выход.
 [mode.service.binding]
-    esc = ['reload-config', 'mode main']
-    r = ['flatten-workspace-tree', 'mode main']
     f = ['layout floating tiling', 'mode main']
-    backspace = ['close-all-windows-but-current', 'mode main']
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
+    h = ['join-with left', 'mode main']
+    j = ['join-with down', 'mode main']
+    k = ['join-with up', 'mode main']
+    l = ['join-with right', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main']
+    b = ['balance-sizes', 'mode main']
+    t = ['layout tiles horizontal vertical', 'mode main']
+    a = ['layout accordion horizontal vertical', 'mode main']
+    enter = ['fullscreen', 'mode main']                          # на весь воркспейс, зазоры сохраняются
+    e = ['fullscreen --no-outer-gaps', 'mode main']              # вплотную ко всей видимой области (меню и Dock остаются)
+    n = ['macos-native-fullscreen', 'mode main']                 # нативный fullscreen macOS: отдельный Space, меню и Dock скрыты
+    q = ['close', 'mode main']
+    esc = ['reload-config', 'mode main']
 
 # Просмотрщик шпаргалок (по AeroSpace и по Corne): плавающее окно на текущем воркспейсе
 [[on-window-detected]]
