@@ -70,13 +70,13 @@
   <tr><td>Фокус на соседнее окно</td><td><kbd>Hyper</kbd> <kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> (← ↓ ↑ →)</td></tr>
   <tr><td>Перейти на воркспейс</td><td><kbd>Hyper</kbd> + <kbd>T B P D F S E 1 2 3</kbd></td></tr>
   <tr><td>Вернуться на прошлый</td><td><kbd>Hyper</kbd> <kbd>Tab</kbd></td></tr>
-  <tr><td>Тайлы (гориз. ↔ верт.)</td><td><kbd>Hyper</kbd> <kbd>/</kbd></td></tr>
-  <tr><td>Аккордеон (стопка)</td><td><kbd>Hyper</kbd> <kbd>,</kbd></td></tr>
-  <tr><td>Плавающее ↔ в тайле</td><td><kbd>Hyper</kbd> <kbd>.</kbd> или слой Nav: <kbd>G</kbd></td></tr>
+  <tr><td>Тайлы (гориз. ↔ верт.)</td><td><kbd>Hyper</kbd> <kbd>V</kbd></td></tr>
+  <tr><td>Аккордеон (стопка)</td><td><kbd>Hyper</kbd> <kbd>A</kbd></td></tr>
+  <tr><td>Плавающее ↔ в тайле</td><td><kbd>Hyper</kbd> <kbd>G</kbd> или слой Nav: <kbd>G</kbd></td></tr>
   <tr><td>На весь воркспейс (зазоры остаются)</td><td><kbd>Hyper</kbd> <kbd>Enter</kbd> или слой Nav: <kbd>F</kbd></td></tr>
-  <tr><td>Прошлый / следующий воркспейс</td><td>слой Nav (удержание Space): <kbd>;</kbd> / <kbd>'</kbd>, по кругу, порядок <kbd>1 2 3 B D F P S T</kbd></td></tr>
+  <tr><td>Прошлый / следующий воркспейс</td><td>слой Nav (удержание Space): <kbd>;</kbd> / <kbd>'</kbd>, по кругу, порядок <kbd>1 2 3 B D E F P S T</kbd></td></tr>
   <tr><td>Выровнять размеры</td><td><kbd>Hyper</kbd> <kbd>=</kbd></td></tr>
-  <tr><td>Окна друг под другом</td><td><kbd>Hyper</kbd> <kbd>/</kbd> (стопка сверху вниз, ещё раз — обратно); вложить окно с соседом: сервисный режим <kbd>Hyper</kbd> <kbd>;</kbd>, затем <kbd>H J K L</kbd></td></tr>
+  <tr><td>Окна друг под другом</td><td><kbd>Hyper</kbd> <kbd>V</kbd> (стопка сверху вниз, ещё раз — обратно); вложить окно с соседом: сервисный режим <kbd>Hyper</kbd> <kbd>;</kbd>, затем <kbd>H J K L</kbd></td></tr>
 </table>
 
 <h2>Режимы</h2>
@@ -87,39 +87,31 @@
   <tr><td><kbd>Hyper</kbd> <kbd>R</kbd><br>размер</td>
       <td><kbd>H</kbd> / <kbd>L</kbd> ширина − / +; <kbd>J</kbd> / <kbd>K</kbd> высота + / −;
           <kbd>B</kbd> выровнять; <kbd>Esc</kbd> / <kbd>Enter</kbd> выход</td></tr>
-  <tr><td><kbd>Hyper</kbd> <kbd>;</kbd><br>сервисный<br>(запасной вход <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>;</kbd>)</td>
-      <td>одна клавиша, затем сам выходит: <kbd>F</kbd> плавающее ↔ тайл; <kbd>H J K L</kbd> вложить окно с соседом;
-          <kbd>R</kbd> сбросить раскладку воркспейса; <kbd>B</kbd> выровнять размеры; <kbd>T</kbd> тайлы;
+  <tr><td><kbd>Hyper</kbd> <kbd>;</kbd><br>сервисный</td>
+      <td>одна клавиша, затем сам выходит: <kbd>F</kbd> на весь воркспейс (повторно — назад); <kbd>G</kbd> плавающее ↔ тайл; <kbd>H J K L</kbd> вложить окно с соседом;
+          <kbd>R</kbd> сбросить раскладку воркспейса; <kbd>B</kbd> выровнять размеры; <kbd>V</kbd> или <kbd>T</kbd> тайлы;
           <kbd>A</kbd> аккордеон; <kbd>Enter</kbd> на весь воркспейс с зазорами; <kbd>E</kbd> вплотную без зазоров;
-          <kbd>N</kbd> нативный fullscreen macOS (отдельный Space); <kbd>Q</kbd> <span class="warn">закрыть текущее окно</span>;
+          <kbd>N</kbd> нативный fullscreen macOS вкл / выкл (отдельный Space); <kbd>X</kbd> расклеить залипшее окно; <kbd>Q</kbd> <span class="warn">закрыть текущее окно</span>;
           <kbd>Esc</kbd> перечитать конфиг</td></tr>
 </table>
 </div>
 
 <div>
-<h2>Запасные <kbd>Alt</kbd>-сочетания</h2>
-<table>
-  <tr><td>Фокус / перенос окна</td><td><kbd>Alt</kbd> <kbd>H J K L</kbd> / <kbd>Alt Shift H J K L</kbd></td></tr>
-  <tr><td>Воркспейс / окно на воркспейс</td><td><kbd>Alt</kbd> + буква / <kbd>Alt Shift</kbd> + буква</td></tr>
-  <tr><td>Прошлый воркспейс</td><td><kbd>Alt</kbd> <kbd>Tab</kbd></td></tr>
-  <tr><td>Раскладки</td><td><kbd>Alt</kbd> <kbd>/</kbd> тайлы · <kbd>Alt</kbd> <kbd>,</kbd> аккордеон</td></tr>
-  <tr><td>Размер</td><td><kbd>Alt</kbd> <kbd>−</kbd> / <kbd>=</kbd></td></tr>
-</table>
-
 <h2>Не забыть</h2>
 <ul class="note">
   <li>Новое окно уходит на «свой» воркспейс само, но только в момент появления. Уже открытые остаются где были.</li>
   <li>Клик по приложению в Dock (или любое переключение на его окно) сам переключает на его воркспейс: AeroSpace идёт за фокусом macOS.</li>
-  <li>Новое окно встаёт рядом с текущим (на широком экране справа). Окна друг под другом: <kbd>Hyper</kbd> <kbd>/</kbd>.</li>
+  <li>Новое окно встаёт рядом с текущим (на широком экране справа). Окна друг под другом: <kbd>Hyper</kbd> <kbd>V</kbd>.</li>
   <li>Gmail, Calendar и Meet — приложения Chrome (<code>~/Applications/Chrome Apps</code>), они на <b>S</b>. Обычный Chrome на <b>B</b>.</li>
-  <li>Приложение без правила (например VLC) открывается на текущем воркспейсе и само встаёт в тайлы. Отправить на другой: <kbd>Hyper</kbd> <kbd>M</kbd>, затем буква воркспейса. Закрепить за воркспейсом навсегда: правило <code>[[on-window-detected]]</code> с id из <code>aerospace list-apps</code>.</li>
-  <li>Окно «не слушается» (в раскладке <code>macos_native_fullscreen</code>, «Can't change layout…»): перенеси его на другой воркспейс и обратно (<kbd>Hyper</kbd> <kbd>M</kbd>, <kbd>3</kbd>, потом <kbd>Hyper</kbd> <kbd>3</kbd>, <kbd>Hyper</kbd> <kbd>M</kbd>, нужная буква): AeroSpace заново определит окно.</li>
-  <li>Синяя рамка 4 px — активное окно (JankyBorders, настройки в <code>~/.config/borders/bordersrc</code>).</li>
+  <li>Приложение без правила (например Preview) открывается на текущем воркспейсе и само встаёт в тайлы. Отправить на другой: <kbd>Hyper</kbd> <kbd>M</kbd>, затем буква воркспейса. Закрепить за воркспейсом навсегда: правило <code>[[on-window-detected]]</code> с id из <code>aerospace list-apps</code>.</li>
+  <li>Окно «не слушается» (в раскладке <code>macos_native_fullscreen</code>, «Can't change layout…»): сервисный режим, <kbd>X</kbd>: окно уйдёт на другой воркспейс и вернётся, AeroSpace заново определит его.</li>
+  <li>Серая рамка 4,8 px — активное окно (JankyBorders, настройки в <code>~/.config/borders/bordersrc</code>).</li>
   <li>Docker Desktop плавающий: минимум его окна около 940×600, в половину экрана не влезает. Двигать и менять размер мышью.</li>
   <li>Не нажимай зелёную кнопку окна (macOS-fullscreen): она создаёт отдельный Space. Вместо неё <kbd>Hyper</kbd> <kbd>Enter</kbd> (зазоры остаются) или сервисный режим, <kbd>E</kbd> (вплотную). Меню сверху (34 px) и Dock снизу (90 px) AeroSpace закрыть не может: для этого автоскрытие в настройках macOS или нативный fullscreen (сервисный режим, <kbd>N</kbd>).</li>
   <li>Слой Nav на Corne шлёт ⌃←/→/↑/↓, их перехватывает AeroSpace (воркспейсы, fullscreen, плавающее): настоящие Ctrl+стрелки в приложениях не работают. Для этого системные сочетания Spaces, Mission Control и App Exposé отключены (<code>scripts/macos-spaces-shortcuts.sh off|on</code> в dotfiles).</li>
-  <li>Если всё же нажал зелёную кнопку или <kbd>f</kbd> в видео: окно уходит в отдельный Space на весь экран. <kbd>Hyper</kbd> + буква воркспейса возвращает на обычный стол, обратно к окну — свайпом или Mission Control. Выйти: <kbd>Esc</kbd> в плеере, <kbd>Ctrl</kbd> <kbd>Cmd</kbd> <kbd>F</kbd> или <code>aerospace macos-native-fullscreen off</code>.</li>
+  <li>Если всё же нажал зелёную кнопку или <kbd>f</kbd> в видео: окно уходит в отдельный Space на весь экран. <kbd>Hyper</kbd> + буква воркспейса возвращает на обычный стол, обратно к окну — свайпом или Mission Control. Выйти: <kbd>Hyper</kbd> <kbd>;</kbd> <kbd>N</kbd>, <kbd>Esc</kbd> в плеере, <kbd>Ctrl</kbd> <kbd>Cmd</kbd> <kbd>F</kbd> или <code>aerospace macos-native-fullscreen off</code>.</li>
   <li>Окна пропали или не тайлятся: System Settings → Privacy &amp; Security → Accessibility, выключить и включить AeroSpace, перезапустить его. Проверка: <code>aerospace list-windows --all</code>.</li>
+  <li>Cmd+H не прячет окна: AeroSpace сразу показывает приложение снова. Все окна разом: Mission Control (свайп вверх), клик по окну — переход на его воркспейс.</li>
   <li>Временно выключить тайлинг: <code>aerospace enable off</code> (вернуть: <code>on</code>).</li>
   <li>Конфиг перечитывается сам; вручную <code>aerospace reload-config</code>.</li>
   <li>Файл: <code>~/.aerospace.toml</code> → симлинк на <code>dotfiles/.aerospace.toml</code>. Править только в репозитории.</li>
