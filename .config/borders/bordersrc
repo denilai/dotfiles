@@ -1,0 +1,13 @@
+#!/bin/bash
+# JankyBorders: цветная рамка вокруг активного окна (AeroSpace рамок сам не рисует).
+# Запускается службой Homebrew: brew services start felixkratz/formulae/borders
+# Описание: docs/aerospace.md. Цвет в формате 0xAARRGGBB.
+options=(
+    style=round
+    width=4.0
+    hidpi=on
+    active_color=0xff1f6feb      # синяя рамка активного окна (тот же акцент, что в шпаргалке)
+    inactive_color=0x00000000    # у неактивных окон рамки нет
+)
+
+borders "${options[@]}"
