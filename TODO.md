@@ -3,7 +3,7 @@
 ## AeroSpace
 
 Договорённости: воркспейсы по ролям (буква = роль), приложения попадают на свой
-воркспейс правилами `[[on-window-detected]]`, модификатор — Hyper (правый Del thumb),
+воркспейс правилами `[[on-window-detected]]`, модификатор — Hyper (правый Del thumb или левый Enter thumb),
 «переместить» и «resize» — режимы `move` и `resize`, macOS Spaces и native-fullscreen
 не используем. Роли и сочетания — в `docs/aerospace.md` и в шпаргалке.
 

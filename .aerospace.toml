@@ -32,7 +32,7 @@ gaps.outer.bottom =     8
 gaps.outer.top =        8
 gaps.outer.right =      8
 
-# Модификатор — Hyper = ctrl-alt-shift-cmd (удержание правого Del thumb на Corne).
+# Модификатор — Hyper = ctrl-alt-shift-cmd (удержание правого Del thumb или левого Enter thumb на Corne).
 # Alt-биндинги ниже — запасные, пока Hyper не проверен на железе.
 [mode.main.binding]
 
