@@ -20,15 +20,17 @@
 
 ## Состояние конфига
 
-- **Воркспейсы по ролям:** `T` терминал и редактор (Terminal, VS Code, Docker Desktop,
-  Notes, TextEdit), `B` Chrome, `P` Vivaldi, `D` Obsidian и чат-приложение, `F` системные
+- **Воркспейсы по ролям:** `T` терминал и редактор (Terminal, VS Code, Fork, Docker Desktop,
+  Notes, TextEdit), `B` браузер (Chrome, OpenVPN Connect, Iru Self Service), `P` Personal
+  (Vivaldi, Bitwarden, Lens), `D` Obsidian и чат-приложение, `E` дом и развлечения (VLC, Photos,
+  Home, iPhone Mirroring; буква E, потому что H занята фокусом влево), `F` системные
   окна (Finder, System Settings, Activity Monitor; плавающие), `S` Slack, Calendar, Gmail,
   Google Calendar, Google Meet (три последних — приложения Chrome со своими id); `1 2 3` для
   разового. Приложения попадают на свой воркспейс правилами `[[on-window-detected]]`
   в момент появления окна.
 - **Модификатор — Hyper** (`ctrl-alt-shift-cmd`, удержание правого Del thumb или левого
   Enter thumb на Corne: буквы любой половины нажимаются с Hyper противоположной руки):
-  `H J K L` фокус, буква роли (`T B P D F S 1 2 3`) — воркспейс, `Tab` — прошлый
+  `H J K L` фокус, буква роли (`T B P D F S E 1 2 3`) — воркспейс, `Tab` — прошлый
   воркспейс, `/` `,` `.` — тайлы, аккордеон, плавающее, `Enter` — на весь воркспейс (`fullscreen`:
   внешние зазоры `gaps.outer` сохраняются, с одним окном размер почти не меняется, с несколькими
   окно закрывает остальные), `=` — выровнять размеры.

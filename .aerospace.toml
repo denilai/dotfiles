@@ -19,7 +19,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = false
 
 # Воркспейсы по ролям (буква = роль), 1–3 для разового.
-persistent-workspaces = ["T", "B", "P", "D", "F", "S", "1", "2", "3"]
+persistent-workspaces = ["T", "B", "P", "D", "F", "S", "E", "1", "2", "3"]
 
 on-mode-changed = []
 focus-follows-mouse.enabled = false
@@ -49,6 +49,7 @@ gaps.outer.right =      8
     ctrl-alt-shift-cmd-d = 'workspace D'
     ctrl-alt-shift-cmd-f = 'workspace F'
     ctrl-alt-shift-cmd-s = 'workspace S'
+    ctrl-alt-shift-cmd-e = 'workspace E'
     ctrl-alt-shift-cmd-1 = 'workspace 1'
     ctrl-alt-shift-cmd-2 = 'workspace 2'
     ctrl-alt-shift-cmd-3 = 'workspace 3'
@@ -96,6 +97,7 @@ gaps.outer.right =      8
     alt-d = 'workspace D'
     alt-f = 'workspace F'
     alt-s = 'workspace S'
+    alt-e = 'workspace E'
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
@@ -105,6 +107,7 @@ gaps.outer.right =      8
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-f = 'move-node-to-workspace F'
     alt-shift-s = 'move-node-to-workspace S'
+    alt-shift-e = 'move-node-to-workspace E'
     alt-shift-1 = 'move-node-to-workspace 1'
     alt-shift-2 = 'move-node-to-workspace 2'
     alt-shift-3 = 'move-node-to-workspace 3'
@@ -124,6 +127,7 @@ gaps.outer.right =      8
     d = ['move-node-to-workspace D', 'mode main']
     f = ['move-node-to-workspace F', 'mode main']
     s = ['move-node-to-workspace S', 'mode main']
+    e = ['move-node-to-workspace E', 'mode main']
     1 = ['move-node-to-workspace 1', 'mode main']
     2 = ['move-node-to-workspace 2', 'mode main']
     3 = ['move-node-to-workspace 3', 'mode main']
@@ -185,14 +189,34 @@ run = 'move-node-to-workspace T'
 if.app-id = 'com.apple.TextEdit'
 run = 'move-node-to-workspace T'
 
+[[on-window-detected]]
+if.app-id = 'com.DanPristupov.Fork'
+run = 'move-node-to-workspace T'
+
 # B: браузер
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace B'
 
+[[on-window-detected]]
+if.app-id = 'org.openvpn.client.app'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'io.kandji.Self-Service'
+run = 'move-node-to-workspace B'
+
 # P: личное
 [[on-window-detected]]
 if.app-id = 'com.vivaldi.Vivaldi'
+run = 'move-node-to-workspace P'
+
+[[on-window-detected]]
+if.app-id = 'com.bitwarden.desktop'
+run = 'move-node-to-workspace P'
+
+[[on-window-detected]]
+if.app-id = 'com.electron.kontena-lens'
 run = 'move-node-to-workspace P'
 
 # D: документы
@@ -203,6 +227,23 @@ run = 'move-node-to-workspace D'
 [[on-window-detected]]
 if.app-id = 'com.anthropic.claudefordesktop'
 run = 'move-node-to-workspace D'
+
+# E: дом и развлечения (VLC, Photos, Home, iPhone Mirroring)
+[[on-window-detected]]
+if.app-id = 'org.videolan.vlc'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Photos'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Home'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ScreenContinuity'
+run = 'move-node-to-workspace E'
 
 # F: системные окна (плавающие)
 [[on-window-detected]]
