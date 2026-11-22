@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Проверка конфига AeroSpace и его шпаргалки при коммите (scripts/check-aerospace-docs.py):
+# ошибки конфига блокируют коммит, расхождение со шпаргалкой только предупреждает.
+# Хуки репозитория вызывает общий диспетчер (core.hooksPath=~/.githooks-global) из .git/hooks:
+#   ln -s ../../.githooks/pre-commit .git/hooks/pre-commit
+set -euo pipefail
+if git diff --cached --name-only |
+    grep -qxE '\.aerospace\.toml|docs/aerospace-cheatsheet\.html|docs/aerospace\.md|scripts/aerospace-cheatsheet\.sh'; then
+    python3 -I scripts/check-aerospace-docs.py
+fi
