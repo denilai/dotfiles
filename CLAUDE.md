@@ -29,6 +29,10 @@
 
 ## AeroSpace
 
+После любого изменения ролей воркспейсов, сочетаний или режимов в `.aerospace.toml`
+обновить шпаргалку `docs/aerospace-cheatsheet.html` и `docs/aerospace.md`: они должны
+совпадать с конфигом.
+
 Конфиг `.aerospace.toml`, документ `docs/aerospace.md`, правила и подводные камни —
 скил `aerospace` (`~/.claude/skills/aerospace/SKILL.md`), раскладка клавиатуры —
 `~/repos/personal/corne-keyboard-layout`. После правки конфига:

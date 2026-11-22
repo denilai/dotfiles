@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AeroSpace — шпаргалка</title>
+<style>
+  :root { --ink:#1b1f24; --muted:#5f6b76; --line:#d8dee4; --soft:#f5f7f9; --accent:#1f6feb; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:22px 26px 28px; background:#fff; color:var(--ink);
+         font:14px/1.45 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+  h1 { margin:0 0 2px; font-size:22px; }
+  h2 { margin:22px 0 8px; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+  h2 kbd { text-transform:none; letter-spacing:0; }
+  .sub { margin:0; color:var(--muted); }
+  kbd { display:inline-block; padding:0 6px; border:1px solid var(--line); border-bottom-width:2px;
+        border-radius:5px; background:var(--soft); font:12px/1.6 ui-monospace, Menlo, monospace; white-space:nowrap; }
+  code { font:12.5px ui-monospace, Menlo, monospace; background:var(--soft); padding:1px 5px; border-radius:4px; }
+
+  .ws { display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; }
+  .box { border:1px solid var(--line); border-radius:8px; padding:9px 11px; }
+  .box b.k { display:inline-block; min-width:26px; text-align:center; margin-right:6px; padding:1px 0;
+             border-radius:5px; background:var(--accent); color:#fff; font-size:15px; }
+  .box .t { font-weight:600; }
+  .box .a { margin-top:4px; color:var(--muted); font-size:13px; }
+  .box.float { border-style:dashed; }
+  .box.adhoc { background:var(--soft); }
+
+  table { width:100%; border-collapse:collapse; }
+  td { padding:5px 8px; border-top:1px solid var(--line); vertical-align:top; }
+  tr:first-child td { border-top:none; }
+  td:first-child { width:36%; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .note { margin:0; padding-left:18px; }
+  .note li { margin:3px 0; }
+  .warn { color:#b42318; }
+  @media (max-width:760px) { .ws { grid-template-columns:1fr 1fr; } .cols { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<h1>AeroSpace — шпаргалка</h1>
+<p class="sub"><b>Hyper</b> = удержание правого <kbd>Del</kbd> thumb на Corne (⌃⌥⇧⌘). Открыть и закрыть шпаргалку:
+  два крайних sticky Shift третьего ряда одновременно. <kbd>Esc</kbd> тоже закрывает.</p>
+
+<h2>Воркспейсы: <kbd>Hyper</kbd> + буква</h2>
+<div class="ws">
+  <div class="box"><span class="t"><b class="k">T</b>Терминал и редактор</span>
+    <div class="a">Terminal · VS Code · Docker · Notes · TextEdit</div></div>
+  <div class="box"><span class="t"><b class="k">B</b>Браузер</span>
+    <div class="a">Chrome</div></div>
+  <div class="box"><span class="t"><b class="k">P</b>Personal</span>
+    <div class="a">Vivaldi</div></div>
+  <div class="box"><span class="t"><b class="k">D</b>Документы</span>
+    <div class="a">Obsidian · чат-приложение</div></div>
+  <div class="box float"><span class="t"><b class="k">F</b>Системные (плавающие)</span>
+    <div class="a">Finder · Настройки · Мониторинг системы</div></div>
+  <div class="box"><span class="t"><b class="k">S</b>Связь</span>
+    <div class="a">Slack · Calendar · Gmail · Google Calendar · Meet</div></div>
+  <div class="box adhoc"><span class="t"><b class="k">1</b><b class="k">2</b><b class="k">3</b>Разовое</span>
+    <div class="a">пустые, для временных задач</div></div>
+</div>
+
+<div class="cols">
+<div>
+<h2>Основное</h2>
+<table>
+  <tr><td>Фокус на соседнее окно</td><td><kbd>Hyper</kbd> <kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> (← ↓ ↑ →)</td></tr>
+  <tr><td>Перейти на воркспейс</td><td><kbd>Hyper</kbd> + <kbd>T B P D F S 1 2 3</kbd></td></tr>
+  <tr><td>Вернуться на прошлый</td><td><kbd>Hyper</kbd> <kbd>Tab</kbd></td></tr>
+  <tr><td>Тайлы (гориз. ↔ верт.)</td><td><kbd>Hyper</kbd> <kbd>/</kbd></td></tr>
+  <tr><td>Аккордеон (стопка)</td><td><kbd>Hyper</kbd> <kbd>,</kbd></td></tr>
+  <tr><td>Плавающее ↔ в тайле</td><td><kbd>Hyper</kbd> <kbd>.</kbd></td></tr>
+  <tr><td>На весь воркспейс</td><td><kbd>Hyper</kbd> <kbd>Enter</kbd></td></tr>
+  <tr><td>Выровнять размеры</td><td><kbd>Hyper</kbd> <kbd>=</kbd></td></tr>
+</table>
+
+<h2>Режимы</h2>
+<table>
+  <tr><td><kbd>Hyper</kbd> <kbd>M</kbd><br>перенос окна</td>
+      <td><kbd>H J K L</kbd> двигают окно; <kbd>T B P D F S 1 2 3</kbd> отправляют на воркспейс и выходят;
+          <kbd>Esc</kbd> / <kbd>Enter</kbd> выход</td></tr>
+  <tr><td><kbd>Hyper</kbd> <kbd>R</kbd><br>размер</td>
+      <td><kbd>H</kbd> / <kbd>L</kbd> ширина − / +; <kbd>J</kbd> / <kbd>K</kbd> высота + / −;
+          <kbd>B</kbd> выровнять; <kbd>Esc</kbd> / <kbd>Enter</kbd> выход</td></tr>
+  <tr><td><kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>;</kbd><br>сервисный</td>
+      <td><kbd>F</kbd> плавающее; <kbd>R</kbd> сбросить раскладку воркспейса;
+          <kbd>Alt Shift H J K L</kbd> объединить окно с соседом; <kbd>Esc</kbd> перечитать конфиг;
+          <kbd>Backspace</kbd> <span class="warn">закрыть все окна, кроме текущего</span></td></tr>
+</table>
+</div>
+
+<div>
+<h2>Запасные <kbd>Alt</kbd>-сочетания</h2>
+<table>
+  <tr><td>Фокус / перенос окна</td><td><kbd>Alt</kbd> <kbd>H J K L</kbd> / <kbd>Alt Shift H J K L</kbd></td></tr>
+  <tr><td>Воркспейс / окно на воркспейс</td><td><kbd>Alt</kbd> + буква / <kbd>Alt Shift</kbd> + буква</td></tr>
+  <tr><td>Прошлый воркспейс</td><td><kbd>Alt</kbd> <kbd>Tab</kbd></td></tr>
+  <tr><td>Раскладки</td><td><kbd>Alt</kbd> <kbd>/</kbd> тайлы · <kbd>Alt</kbd> <kbd>,</kbd> аккордеон</td></tr>
+  <tr><td>Размер</td><td><kbd>Alt</kbd> <kbd>−</kbd> / <kbd>=</kbd></td></tr>
+</table>
+
+<h2>Не забыть</h2>
+<ul class="note">
+  <li>Новое окно уходит на «свой» воркспейс само, но только в момент появления. Уже открытые остаются где были.</li>
+  <li>Gmail, Calendar и Meet — приложения Chrome (<code>~/Applications/Chrome Apps</code>), они на <b>S</b>. Обычный Chrome на <b>B</b>.</li>
+  <li>Не нажимай зелёную кнопку окна (macOS-fullscreen): она создаёт отдельный Space. Вместо неё <kbd>Hyper</kbd> <kbd>Enter</kbd>.</li>
+  <li>Окна пропали или не тайлятся: System Settings → Privacy &amp; Security → Accessibility, выключить и включить AeroSpace, перезапустить его. Проверка: <code>aerospace list-windows --all</code>.</li>
+  <li>Временно выключить тайлинг: <code>aerospace enable off</code> (вернуть: <code>on</code>).</li>
+  <li>Конфиг перечитывается сам; вручную <code>aerospace reload-config</code>.</li>
+  <li>Файл: <code>~/.aerospace.toml</code> → симлинк на <code>dotfiles/.aerospace.toml</code>. Править только в репозитории.</li>
+  <li>Hyper на Corne — удержание правого <kbd>Del</kbd> thumb; короткое нажатие даёт обычный Del.</li>
+</ul>
+</div>
+</div>
+
+</body>
+</html>

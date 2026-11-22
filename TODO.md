@@ -3,26 +3,28 @@
 ## AeroSpace
 
 Договорённости: воркспейсы по ролям (буква = роль), приложения попадают на свой
-воркспейс правилами `[[on-window-detected]]`, воркспейсов 9–10; модификатор —
-Hyper (правый Del thumb); «переместить» и «resize» — режимы `move` (Hyper+M) и
-`resize` (Hyper+R); macOS Spaces и native-fullscreen не используем.
+воркспейс правилами `[[on-window-detected]]`, модификатор — Hyper (правый Del thumb),
+«переместить» и «resize» — режимы `move` и `resize`, macOS Spaces и native-fullscreen
+не используем. Роли и сочетания — в `docs/aerospace.md` и в шпаргалке.
 
-- [ ] Узнать у пользователя роли и приложения (набросок: T терминал и редактор,
-  B браузер, S чат и календарь, O заметки, F Finder и системные окна).
-- [ ] Hyper-биндинги: фокус `hjkl`, воркспейсы по буквам, раскладки, float,
-  fullscreen, back-and-forth.
-- [ ] Режимы `move` и `resize`.
-- [ ] Правила `on-window-detected` для приложений и плавающих окон
-  (`aerospace list-apps`).
-- [ ] `start-at-login = true`, `auto-reload-config = true`, зазоры 8 px.
-- [ ] Сократить `persistent-workspaces` до нужных (сейчас 31).
+Сделано (2026-11-23): роли `T B P D F S` + `1 2 3`, правила приложений (Chrome-приложения
+Gmail / Calendar / Meet на `S`), Hyper-биндинги, режимы `move` и `resize`, зазоры 8 px,
+`start-at-login`, `auto-reload-config`, шпаргалка и её открытие по F20.
+
+- [ ] Проверить на железе: прошить Corne с комбо двух крайних sticky Shift (F20),
+  открыть и закрыть шпаргалку.
+- [ ] Проверить на железе, что Hyper работает вместе с H J K L правой руки (home-row mods):
+  `Hyper+H/J/K/L`, `Hyper+T/B/P/D/F/S`, `Hyper+Tab`. Если да — убрать запасные `alt`-биндинги.
+- [ ] Проверить правила для приложений на реальных окнах: Gmail / Calendar / Meet из
+  Chrome должны уходить на `S`, а обычный Chrome на `B` (id приложений Chrome найдены по
+  `Info.plist`, окна ещё не наблюдали в `aerospace list-windows`).
 - [ ] Nav+`;` и Nav+`'` (⌃← / ⌃→) → `workspace prev/next`; решить про Nav+F / Nav+G
   (⌃↑ / ⌃↓): fullscreen и float.
-- [ ] Проверить, что Hyper работает вместе с H J K L правой руки (home-row mods):
-  тест в репозитории Corne.
 - [ ] Индикатор воркспейса в строке меню (SwiftBar, `exec-on-workspace-change`).
 - [ ] Слой «Win» в прошивке Corne (фокус = ⌃⌥⌘+клавиша, перемещение =
   Hyper+клавиша), убирает режимы `move` / `resize`. Делается в репозитории Corne.
+- [ ] Окно шпаргалки называется «Corne keymap» (общий просмотрщик): сделать своё название
+  или отдельный просмотрщик.
 - [ ] AeroSpace перестаёт видеть окна (Accessibility «протухает»): выяснить,
   повторяется ли это само, например, после перезагрузки или из-за корпоративного
   ПО (Admin By Request).
