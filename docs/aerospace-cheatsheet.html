@@ -46,7 +46,7 @@
 <h2>Воркспейсы: <kbd>Hyper</kbd> + буква</h2>
 <div class="ws">
   <div class="box"><span class="t"><b class="k">T</b>Терминал и редактор</span>
-    <div class="a">Terminal · VS Code · Docker · Notes · TextEdit</div></div>
+    <div class="a">Terminal · VS Code · Docker (плавающий) · Notes · TextEdit</div></div>
   <div class="box"><span class="t"><b class="k">B</b>Браузер</span>
     <div class="a">Chrome</div></div>
   <div class="box"><span class="t"><b class="k">P</b>Personal</span>
@@ -73,6 +73,7 @@
   <tr><td>Плавающее ↔ в тайле</td><td><kbd>Hyper</kbd> <kbd>.</kbd></td></tr>
   <tr><td>На весь воркспейс</td><td><kbd>Hyper</kbd> <kbd>Enter</kbd></td></tr>
   <tr><td>Выровнять размеры</td><td><kbd>Hyper</kbd> <kbd>=</kbd></td></tr>
+  <tr><td>Окна друг под другом</td><td><kbd>Hyper</kbd> <kbd>/</kbd> (стопка сверху вниз, ещё раз — обратно); вложить окно с соседом: сервисный режим, <kbd>Alt Shift H J K L</kbd></td></tr>
 </table>
 
 <h2>Режимы</h2>
@@ -103,7 +104,10 @@
 <h2>Не забыть</h2>
 <ul class="note">
   <li>Новое окно уходит на «свой» воркспейс само, но только в момент появления. Уже открытые остаются где были.</li>
+  <li>Клик по приложению в Dock (или любое переключение на его окно) сам переключает на его воркспейс: AeroSpace идёт за фокусом macOS.</li>
+  <li>Новое окно встаёт рядом с текущим (на широком экране справа). Окна друг под другом: <kbd>Hyper</kbd> <kbd>/</kbd>.</li>
   <li>Gmail, Calendar и Meet — приложения Chrome (<code>~/Applications/Chrome Apps</code>), они на <b>S</b>. Обычный Chrome на <b>B</b>.</li>
+  <li>Docker Desktop плавающий: минимум его окна около 940×600, в половину экрана не влезает. Двигать и менять размер мышью.</li>
   <li>Не нажимай зелёную кнопку окна (macOS-fullscreen): она создаёт отдельный Space. Вместо неё <kbd>Hyper</kbd> <kbd>Enter</kbd>.</li>
   <li>Окна пропали или не тайлятся: System Settings → Privacy &amp; Security → Accessibility, выключить и включить AeroSpace, перезапустить его. Проверка: <code>aerospace list-windows --all</code>.</li>
   <li>Временно выключить тайлинг: <code>aerospace enable off</code> (вернуть: <code>on</code>).</li>

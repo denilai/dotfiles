@@ -160,7 +160,7 @@ run = 'move-node-to-workspace T'
 
 [[on-window-detected]]
 if.app-id = 'com.electron.dockerdesktop'
-run = 'move-node-to-workspace T'
+run = ['layout floating', 'move-node-to-workspace T']  # минимум окна ~940x600, в плитке вылезает за экран
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'

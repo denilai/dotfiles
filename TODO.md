@@ -21,6 +21,9 @@ Gmail / Calendar / Meet на `S`), Hyper-биндинги, режимы `move` �
 - [ ] Nav+`;` и Nav+`'` (⌃← / ⌃→) → `workspace prev/next`; решить про Nav+F / Nav+G
   (⌃↑ / ⌃↓): fullscreen и float.
 - [ ] Индикатор воркспейса в строке меню (SwiftBar, `exec-on-workspace-change`).
+- [ ] Поставить JankyBorders (`brew install FelixKratz/formulae/borders`): цветная рамка
+  вокруг активного окна. Запуск через `after-startup-command` в `.aerospace.toml`, цвет и
+  толщину выбрать вместе. AeroSpace рамок сам не рисует.
 - [ ] Слой «Win» в прошивке Corne (фокус = ⌃⌥⌘+клавиша, перемещение =
   Hyper+клавиша), убирает режимы `move` / `resize`. Делается в репозитории Corne.
 - [ ] Окно шпаргалки называется «Corne keymap» (общий просмотрщик): сделать своё название
