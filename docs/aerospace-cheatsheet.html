@@ -30,6 +30,11 @@
   td { padding:5px 8px; border-top:1px solid var(--line); vertical-align:top; }
   tr:first-child td { border-top:none; }
   td:first-child { width:36%; }
+  table.keys td:first-child { width:130px; white-space:nowrap; }
+  table.keys tr.mode td { background:var(--soft); font-weight:600; border-top:1px solid var(--line); padding-top:7px; }
+  table.keys tr.mode td span { font-weight:400; color:var(--muted); }
+  ol.steps { margin:0 0 4px; padding-left:20px; }
+  ol.steps li { margin:4px 0; }
   .cols { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
   .note { margin:0; padding-left:18px; }
   .note li { margin:3px 0; }
@@ -94,24 +99,47 @@
   <tr><td>Окно «не слушается»</td><td><kbd>Hyper</kbd> <kbd>;</kbd>, <kbd>X</kbd> расклеить; <kbd>Hyper</kbd> <kbd>;</kbd>, <kbd>R</kbd> сбросить раскладку воркспейса</td></tr>
 </table>
 
-<h2>Режимы</h2>
-<table>
-  <tr><td><kbd>Hyper</kbd> <kbd>M</kbd><br>перенос окна</td>
-      <td><kbd>H J K L</kbd> двигают окно; <kbd>T B P D F S E 1 2 3</kbd> отправляют на воркспейс и выходят;
-          <kbd>Esc</kbd> / <kbd>Enter</kbd> выход</td></tr>
-  <tr><td><kbd>Hyper</kbd> <kbd>R</kbd><br>размер</td>
-      <td><kbd>H</kbd> / <kbd>L</kbd> ширина − / +; <kbd>J</kbd> / <kbd>K</kbd> высота + / −;
-          <kbd>B</kbd> выровнять; <kbd>Esc</kbd> / <kbd>Enter</kbd> выход</td></tr>
-  <tr><td><kbd>Hyper</kbd> <kbd>;</kbd><br>сервисный</td>
-      <td>одна клавиша, затем сам выходит: <kbd>F</kbd> на весь воркспейс (повторно — назад); <kbd>G</kbd> плавающее ↔ тайл; <kbd>H J K L</kbd> вложить окно с соседом;
-          <kbd>R</kbd> сбросить раскладку воркспейса; <kbd>B</kbd> выровнять размеры; <kbd>V</kbd> или <kbd>T</kbd> тайлы;
-          <kbd>A</kbd> аккордеон; <kbd>Enter</kbd> на весь воркспейс с зазорами; <kbd>E</kbd> вплотную без зазоров;
-          <kbd>N</kbd> нативный fullscreen macOS вкл / выкл (отдельный Space); <kbd>X</kbd> расклеить залипшее окно; <kbd>Q</kbd> <span class="warn">закрыть текущее окно</span>;
-          <kbd>Esc</kbd> перечитать конфиг</td></tr>
-</table>
 </div>
 
 <div>
+<h2>Режимы</h2>
+<table class="keys">
+  <tr class="mode"><td colspan="2"><kbd>Hyper</kbd> <kbd>M</kbd> перенос окна</td></tr>
+  <tr><td><kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd></td><td>двигать окно среди соседних, в том числе между контейнерами</td></tr>
+  <tr><td><kbd>T</kbd> <kbd>B</kbd> <kbd>P</kbd> <kbd>D</kbd> <kbd>F</kbd> <kbd>S</kbd> <kbd>E</kbd> <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></td><td>отправить на воркспейс и выйти из режима</td></tr>
+  <tr><td><kbd>Esc</kbd> / <kbd>Enter</kbd></td><td>выход</td></tr>
+  <tr class="mode"><td colspan="2"><kbd>Hyper</kbd> <kbd>R</kbd> размер</td></tr>
+  <tr><td><kbd>H</kbd></td><td>ширина −</td></tr>
+  <tr><td><kbd>L</kbd></td><td>ширина +</td></tr>
+  <tr><td><kbd>J</kbd></td><td>высота +</td></tr>
+  <tr><td><kbd>K</kbd></td><td>высота −</td></tr>
+  <tr><td><kbd>B</kbd></td><td>выровнять размеры</td></tr>
+  <tr><td><kbd>Esc</kbd> / <kbd>Enter</kbd></td><td>выход</td></tr>
+  <tr class="mode"><td colspan="2"><kbd>Hyper</kbd> <kbd>;</kbd> сервисный <span>одна клавиша, затем сам выходит</span></td></tr>
+  <tr><td><kbd>F</kbd></td><td>на весь воркспейс (повторно — назад)</td></tr>
+  <tr><td><kbd>Enter</kbd></td><td>на весь воркспейс с зазорами</td></tr>
+  <tr><td><kbd>E</kbd></td><td>вплотную, без зазоров</td></tr>
+  <tr><td><kbd>G</kbd></td><td>плавающее ↔ тайл</td></tr>
+  <tr><td><kbd>V</kbd> / <kbd>T</kbd></td><td>тайлы (рядом ↔ друг под другом)</td></tr>
+  <tr><td><kbd>A</kbd></td><td>аккордеон</td></tr>
+  <tr><td><kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd></td><td>вложить окно с соседом в ту сторону (<code>join-with</code>)</td></tr>
+  <tr><td><kbd>R</kbd></td><td>сбросить раскладку воркспейса в один ряд</td></tr>
+  <tr><td><kbd>B</kbd></td><td>выровнять размеры</td></tr>
+  <tr><td><kbd>N</kbd></td><td>нативный fullscreen macOS вкл / выкл (отдельный Space)</td></tr>
+  <tr><td><kbd>X</kbd></td><td>расклеить залипшее окно</td></tr>
+  <tr><td><kbd>Q</kbd></td><td><span class="warn">закрыть текущее окно</span></td></tr>
+  <tr><td><kbd>Esc</kbd></td><td>перечитать конфиг</td></tr>
+</table>
+
+<h2>Раскладка: одно окно слева, два справа</h2>
+<ol class="steps">
+  <li>Открой три окна подряд на одном воркспейсе: новое окно встаёт справа от окна в фокусе, получится ряд <b>A</b> <b>B</b> <b>C</b> (если ряд не горизонтальный: <kbd>Hyper</kbd> <kbd>V</kbd>).</li>
+  <li>Фокус на среднее окно <b>B</b>: <kbd>Hyper</kbd> <kbd>H</kbd> / <kbd>L</kbd>.</li>
+  <li><kbd>Hyper</kbd> <kbd>;</kbd>, затем <kbd>L</kbd>: <b>B</b> объединяется с правым соседом <b>C</b> во вложенный контейнер.</li>
+  <li>Готово: слева <b>A</b>, справа <b>B</b> над <b>C</b> (ось вложенного контейнера переворачивается сама).</li>
+</ol>
+<p class="sub">Стопку справа можно перевернуть в ряд: фокус на любое из двух окон, <kbd>Hyper</kbd> <kbd>V</kbd>. Переставить окно: <kbd>Hyper</kbd> <kbd>M</kbd>, затем <kbd>H J K L</kbd>. Вернуть всё в один ряд: <kbd>Hyper</kbd> <kbd>;</kbd>, <kbd>R</kbd>. Команды <code>split</code> в конфиге нет, вместо неё <code>join-with</code>.</p>
+
 <h2>Не забыть</h2>
 <ul class="note">
   <li>Новое окно уходит на «свой» воркспейс само, но только в момент появления. Уже открытые остаются где были.</li>
@@ -120,7 +148,6 @@
   <li>Gmail, Calendar и Meet — приложения Chrome (<code>~/Applications/Chrome Apps</code>), они на <b>S</b>. Обычный Chrome на <b>B</b>.</li>
   <li>Приложение без правила (например Preview) открывается на текущем воркспейсе и само встаёт в тайлы. Отправить на другой: <kbd>Hyper</kbd> <kbd>M</kbd>, затем буква воркспейса. Закрепить за воркспейсом навсегда: правило <code>[[on-window-detected]]</code> с id из <code>aerospace list-apps</code>.</li>
   <li>Окно «не слушается» (в раскладке <code>macos_native_fullscreen</code>, «Can't change layout…»): сервисный режим, <kbd>X</kbd>: окно уйдёт на другой воркспейс и вернётся, AeroSpace заново определит его.</li>
-  <li>Красная рамка 4,8 px — активное окно (JankyBorders, настройки в <code>~/.config/borders/bordersrc</code>).</li>
   <li>Docker Desktop плавающий: минимум его окна около 940×600, в половину экрана не влезает. Двигать и менять размер мышью.</li>
   <li>Не нажимай зелёную кнопку окна (macOS-fullscreen): она создаёт отдельный Space. Вместо неё <kbd>Hyper</kbd> <kbd>Enter</kbd> (зазоры остаются) или сервисный режим, <kbd>E</kbd> (вплотную). Меню сверху (34 px) и Dock снизу (90 px) AeroSpace закрыть не может: для этого автоскрытие в настройках macOS или нативный fullscreen (сервисный режим, <kbd>N</kbd>).</li>
   <li>Слой Nav на Corne шлёт ⌃←/→/↑/↓, их перехватывает AeroSpace (воркспейсы, fullscreen, плавающее): настоящие Ctrl+стрелки в приложениях не работают. Для этого системные сочетания Spaces, Mission Control и App Exposé отключены (<code>scripts/macos-spaces-shortcuts.sh off|on</code> в dotfiles).</li>

@@ -74,11 +74,14 @@
 
   Без этого macOS сама растягивает окна или перехватывает клавиши раньше AeroSpace. Состояние
   тайлинга и двойного клика: `scripts/macos-window-tiling.sh` без аргумента.
-- **Рамка активного окна:** JankyBorders (`brew install FelixKratz/formulae/borders`), AeroSpace
-  рамок сам не рисует. Конфиг `.config/borders/bordersrc` в этом репозитории
-  (`~/.config/borders/bordersrc` — симлинк), красная рамка 4,8 px (`0xffff453a`), у неактивных окон рамки нет. `ax_focus=off`: с `on` и `style=round` вокруг неактивных окон оставался тонкий светлый контур шире окна (проверено снимками экрана; с `ax_focus=off` или со `style=square` его нет). `blacklist` для приложений, у которых рамка рисуется по устаревшему размеру окна (VLC).
-  Запускается службой Homebrew `brew services start felixkratz/formulae/borders` (стартует при
-  входе в систему). Цвет в формате `0xAARRGGBB` (`active_color`), толщина `width`.
+- **Рамка активного окна: выключена.** AeroSpace рамок сам не рисует, раньше стоял JankyBorders
+  (`.config/borders/bordersrc` в репозитории, красная рамка 4,8 px). Выключен
+  (`brew services stop felixkratz/formulae/borders`), потому что у него есть артефакт: над верхним краем
+  окна рисуется тонкая светлая линия по верхней границе окна-рамки (у окон-рамок запас 13 px, верх
+  заходит на строку меню). Не помогли `hidpi`, `ax_focus`, `style`, увеличенный `gaps.outer.top` и
+  сборка из HEAD (a7297ca): линия то пропадает, то возвращается после смены фокуса. С остановленным
+  `borders` линии нет (проверено снимками экрана). Включить обратно: `brew services start
+  felixkratz/formulae/borders`. Фокус и так виден по цвету кнопок окна и яркости заголовка.
 
 ## Шпаргалка
 
