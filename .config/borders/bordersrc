@@ -6,7 +6,7 @@ options=(
     style=round
     width=4.8
     hidpi=on
-    ax_focus=on                  # фокусное окно по Accessibility: точнее, когда размер окон меняет AeroSpace
+    ax_focus=off                 # с on и style=round вокруг неактивных окон оставался тонкий светлый контур
     blacklist="VLC"              # окно подгоняет размер под видео, рамка оставалась по старой геометрии
     active_color=0xffff3b30      # красная рамка активного окна (системный красный macOS)
     inactive_color=0x00000000    # у неактивных окон рамки нет

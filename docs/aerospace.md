@@ -58,6 +58,10 @@
 - **Шпаргалка по F20:** привязка `f20` запускает `scripts/aerospace-cheatsheet.sh toggle`;
   F20 шлёт комбо двух крайних sticky Shift третьего ряда Corne.
 - Зазоры 8 px, `start-at-login = true`, `auto-reload-config = true`.
+- **Действия с окном** (закрыть, спрятать, перенести, размер, fullscreen, плавающее и все дубли
+  сочетаний) собраны в шпаргалке, блок «Окно: закрыть, свернуть, перенести». Закрытие через AeroSpace
+  только `Hyper+;`, `Q` (отдельного `Hyper+Q` нет, чтобы не закрыть окно случайно); свернуть (`⌘M`)
+  не стоит: AeroSpace не видит свёрнутые окна.
 - **Системные настройки macOS под AeroSpace** (меняются скриптами, вернуть — `on`):
 
   | Что | Состояние | Как |
@@ -72,7 +76,7 @@
   тайлинга и двойного клика: `scripts/macos-window-tiling.sh` без аргумента.
 - **Рамка активного окна:** JankyBorders (`brew install FelixKratz/formulae/borders`), AeroSpace
   рамок сам не рисует. Конфиг `.config/borders/bordersrc` в этом репозитории
-  (`~/.config/borders/bordersrc` — симлинк), красная рамка 4,8 px (`0xffff453a`), у неактивных окон рамки нет. `ax_focus=on` (фокус по Accessibility) и `blacklist` для приложений, у которых рамка рисуется по устаревшему размеру окна (VLC): без этого вокруг окна оставался тонкий прямоугольник шире окна.
+  (`~/.config/borders/bordersrc` — симлинк), красная рамка 4,8 px (`0xffff453a`), у неактивных окон рамки нет. `ax_focus=off`: с `on` и `style=round` вокруг неактивных окон оставался тонкий светлый контур шире окна (проверено снимками экрана; с `ax_focus=off` или со `style=square` его нет). `blacklist` для приложений, у которых рамка рисуется по устаревшему размеру окна (VLC).
   Запускается службой Homebrew `brew services start felixkratz/formulae/borders` (стартует при
   входе в систему). Цвет в формате `0xAARRGGBB` (`active_color`), толщина `width`.
 
