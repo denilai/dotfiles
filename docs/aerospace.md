@@ -72,7 +72,7 @@
   тайлинга и двойного клика: `scripts/macos-window-tiling.sh` без аргумента.
 - **Рамка активного окна:** JankyBorders (`brew install FelixKratz/formulae/borders`), AeroSpace
   рамок сам не рисует. Конфиг `.config/borders/bordersrc` в этом репозитории
-  (`~/.config/borders/bordersrc` — симлинк), серая рамка 4,8 px (`0xff8e8e93`), у неактивных окон рамки нет.
+  (`~/.config/borders/bordersrc` — симлинк), красная рамка 4,8 px (`0xffff453a`), у неактивных окон рамки нет. `ax_focus=on` (фокус по Accessibility) и `blacklist` для приложений, у которых рамка рисуется по устаревшему размеру окна (VLC): без этого вокруг окна оставался тонкий прямоугольник шире окна.
   Запускается службой Homebrew `brew services start felixkratz/formulae/borders` (стартует при
   входе в систему). Цвет в формате `0xAARRGGBB` (`active_color`), толщина `width`.
 
